@@ -1,0 +1,231 @@
+//--------HEADER---------//
+header {
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(148, 147, 147, 0.3);
+  .header-title {
+    width: 100%;
+    text-align: center;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 4rem;
+  }
+}
+
+//---------SEARCH-----------//
+.search {
+  @include center(row);
+  height: 5rem;
+  background-color: rgba(148, 147, 147, 0.2);
+  i {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+  }
+  input {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 200px;
+    border: transparent;
+    background-color: transparent;
+  }
+}
+
+//------------SECTION 1------------//
+.section1 {
+  @include center(row);
+  background-color: rgba(148, 147, 147, 0.1);
+  width: 100%;
+  height: 20rem;
+  .explication {
+    @include center(column);
+    &__title {
+      margin: 0 2.8rem 1.2rem 2.8rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    &__text {
+      margin: 0 1rem 2rem 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+//---------------SECTION 2--------------//
+.section2 {
+  margin: 3rem 2rem;
+  width: 100%;
+  height: auto;
+  &__lien {
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.functioning {
+  &__element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 5rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 0;
+    border-radius: 30px;
+    background-color: rgba(148, 147, 147, 0.1);
+    box-shadow: 2px 3px 8px rgba(117, 116, 116, 0.2);
+    z-index: 1;
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+      &:hover {
+        i {
+          color: $primary;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      @include absolute;
+      background: lighten($primary, 35%);
+      border-radius: 30px;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &--purple {
+      position: absolute;
+      top: 1.3rem;
+      left: -0.7rem;
+      color: $color1;
+      border-radius: 50%;
+      background-color: $primary;
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+    i {
+      color: rgb(148, 147, 147);
+      font-size: 1.7rem;
+    }
+
+    &--black {
+      font-weight: bold;
+      margin-left: 1.5rem;
+      color: $color2;
+    }
+  }
+}
+
+//-------------SECTION 3-------------//
+.section3 {
+  width: 100%;
+  height: 85rem;
+  background-color: rgba(148, 147, 147, 0.1);
+  &__title {
+    padding: 2.5rem;
+  }
+}
+.cards {
+  margin: 0 2rem;
+}
+.card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 8px rgba(117, 116, 116, 0.2);
+
+  &__image {
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+  &__info {
+    color: darken($tertiary, 40%);
+    background-color: lighten($tertiary, 5%);
+    font-size: 01rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+}
+
+.card-body {
+  position: relative;
+  &__title {
+    color: $color2;
+    padding: 0.8rem 0 0.5rem 1rem;
+  }
+  &__city {
+    color: $color2;
+    padding: 0 0 0.8rem 1rem;
+  }
+}
+
+.icon-heart {
+  position: absolute;
+  bottom: 35px;
+  right: 30px;
+  font-size: 1.5rem;
+  color: $color2;
+  z-index: 20;
+  opacity: 1;
+  transition: color 250ms ease-in-out;
+  &:hover {
+    color: transparent;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &::after {
+    content: "\f004";
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0;
+    right: 0;
+    background: -webkit-linear-gradient($primary, $secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -10;
+    opacity: 0;
+    transition: all 1s;
+  }
+}
+
+//------------FOOTER----------//
+footer {
+  background-color: lighten($color2, 20%);
+  color: $color1;
+  .footer-title {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2rem;
+    padding: 2rem 0 1.5rem 2rem;
+  }
+  ul {
+    margin-left: 2rem;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    &:last-of-type {
+      padding-bottom: 2rem;
+    }
+  }
+  a {
+    color: $color1;
+    &:hover {
+      text-shadow: 0 0 5px rgb(247, 26, 247);
+    }
+  }
+}
