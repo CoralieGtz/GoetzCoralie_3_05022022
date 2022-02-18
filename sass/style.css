@@ -701,6 +701,11 @@ header .header-title {
           animation: apparition 6s;
 }
 
+.menu__body4 {
+  -webkit-animation: apparition 8s;
+          animation: apparition 8s;
+}
+
 @-webkit-keyframes apparition {
   from {
     opacity: 0;
