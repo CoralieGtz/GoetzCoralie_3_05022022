@@ -1,19 +1,20 @@
 //--------HEADER---------//
-header {
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(148, 147, 147, 0.3);
-  .header-title {
+.header-accueil {
+  margin-bottom: 0.2rem;
+  box-shadow: $box-shadow;
+  &__title {
     width: 100%;
     text-align: center;
     font-family: "Shrikhand", sans-serif;
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 
 //---------SEARCH-----------//
 .search {
   @include center(row);
-  height: 5rem;
-  background-color: rgba(148, 147, 147, 0.2);
+  height: 3.5rem;
+  background-color: lighten($bgc, 18%);
   i {
     font-size: 1.5rem;
     margin-right: 0.3rem;
@@ -31,7 +32,7 @@ header {
 //------------SECTION 1------------//
 .section1 {
   @include center(row);
-  background-color: rgba(148, 147, 147, 0.1);
+  background-color: lighten($bgc, 23%);
   width: 100%;
   height: 20rem;
   .explication {
@@ -51,38 +52,52 @@ header {
 
 //---------------SECTION 2--------------//
 .section2 {
-  margin: 3rem 2rem;
-
+  margin: 5rem 1.5rem;
   height: auto;
-  &__lien {
-    color: black;
-    display: flex;
-    align-items: center;
-  }
 }
 
 .functioning {
+  @include tablet {
+    margin: 0 auto;
+    max-width: 450px;
+  }
   &__element {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 5rem;
     margin: 2rem 0;
-    padding: 2rem;
     border: 0;
-    border-radius: 30px;
-    background-color: rgba(148, 147, 147, 0.1);
-    box-shadow: 2px 3px 8px rgba(117, 116, 116, 0.2);
+    border-radius: $border;
+    background-color: lighten($bgc, 23%);
+    box-shadow: $box-shadow;
     z-index: 1;
-    &:hover {
+    cursor: pointer;
+    @include tablet {
+      justify-content: center;
+      width: 90%;
+      margin: 2rem auto;
+    }
+
+    &:active {
       &::after {
         opacity: 1;
       }
+      &:active {
+        i {
+          color: $primary;
+        }
+      }
+    }
+    @include desktop {
       &:hover {
         i {
           color: $primary;
+        }
+        &::after {
+          opacity: 1;
         }
       }
     }
@@ -90,26 +105,29 @@ header {
       content: "";
       @include absolute;
       background: lighten($primary, 35%);
-      border-radius: 30px;
+      border-radius: $border;
       opacity: 0;
       z-index: -1;
     }
-
     &--purple {
+      @include center(row);
       position: absolute;
-      top: 1.3rem;
-      left: -0.7rem;
+      width: 2rem;
+      height: 2rem;
+      top: 1.5rem;
+      left: -1rem;
       color: $color1;
       border-radius: 50%;
       background-color: $primary;
-      font-size: 1rem;
-      padding: 0.8rem;
     }
     i {
-      color: rgb(148, 147, 147);
-      font-size: 1.7rem;
+      color: darken($bgc, 15%);
+      padding-left: 2.5rem;
+      font-size: 1.5rem;
+      @include tablet {
+        padding-left: 0;
+      }
     }
-
     &--black {
       font-weight: bold;
       margin-left: 1.5rem;
@@ -121,27 +139,34 @@ header {
 //-------------SECTION 3-------------//
 .section3 {
   width: 100%;
-  height: 85rem;
-  background-color: rgba(148, 147, 147, 0.1);
+  background-color: lighten($bgc, 23%);
   &__title {
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 }
+
 .cards {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
+
+.first-group,
+.second-group {
+  @include desktop {
+    @include center(row);
+  }
+}
+
 .card {
   position: relative;
   width: 100%;
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 2px 3px 8px rgba(117, 116, 116, 0.2);
-
+  box-shadow: $box-shadow;
   &__image {
     img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       border-radius: 1rem 1rem 0 0;
     }
@@ -149,13 +174,21 @@ header {
   &__info {
     color: darken($tertiary, 40%);
     background-color: lighten($tertiary, 5%);
-    font-size: 01rem;
+    font-size: 1rem;
     font-weight: bold;
     padding: 0.3rem 0.8rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     position: absolute;
     top: 15px;
     right: 25px;
+  }
+  @include tablet {
+    max-width: 570px;
+    margin: 2rem auto;
+  }
+  @include desktop {
+    width: 45%;
+    margin: 2rem 1rem;
   }
 }
 
@@ -180,10 +213,11 @@ header {
   z-index: 20;
   opacity: 1;
   transition: color 250ms ease-in-out;
-  &:hover {
+  cursor: pointer;
+  &:active {
     color: transparent;
   }
-  &:hover::after {
+  &:active::after {
     opacity: 1;
   }
   &::after {
@@ -201,6 +235,14 @@ header {
     opacity: 0;
     transition: all 1s;
   }
+  @include desktop {
+    &:hover {
+      color: transparent;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 //------------FOOTER----------//
@@ -209,7 +251,7 @@ footer {
   color: $color1;
   .footer-title {
     font-family: "Shrikhand", sans-serif;
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 2rem 0 1.5rem 2rem;
   }
   ul {
@@ -221,11 +263,22 @@ footer {
     &:last-of-type {
       padding-bottom: 2rem;
     }
+    i {
+      margin-right: 0.5rem;
+    }
+    .fa-hands-helping {
+      font-size: 0.7rem;
+    }
   }
   a {
     color: $color1;
-    &:hover {
+    &:active {
       text-shadow: 0 0 5px rgb(247, 26, 247);
+    }
+    @include desktop {
+      &:hover {
+        text-shadow: 0 0 5px rgb(247, 26, 247);
+      }
     }
   }
 }

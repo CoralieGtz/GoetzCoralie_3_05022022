@@ -21,9 +21,9 @@
   <body>
 
     <!------------HEADER------------>
-    <header>
+    <header class="header__menu">
       <a href="index.html"> <i class="fa-solid fa-arrow-left-long"></i></a>
-      <p class="header-title">ohmyfood</p>
+      <p class="header__menu--title">ohmyfood</p>
     </header>
 
     <!----------IMAGE------------>
@@ -35,178 +35,185 @@
     </section>
 
     <!-----------MENU----------->
-    <section class="section__menu">
-      <div class="section__menu--title">
+    <section class="sectionMenu">
+      <div class="sectionMenu__title">
         <h2>La note enchantée</h2>
-        <a href=""><i class="fa-regular fa-heart icon-heart"></i></a>
+        <i class="fa-regular fa-heart icon-heart"></i>
       </div>
 
     <!--ENTREES-->
-      <div class="card__menu">
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Entr</span>ées</h3>
+      <div class="container-menu">
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Entr</span>ées</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Ravioles de foie gras</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Accompagnés de leur crème à la truffe</p>
-                  <span class="menu__body--price">25€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Caviar osciètre</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Sur blini à la farine de blé noir</p>
-                  <span class="menu__body--price">35€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-           <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Homard et espuma de potiron</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Mariné aux zests d'orange</p>
-                  <span class="menu__body--price">20€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+          <section class="menu delay-1">
+          <header class="menu__header">
+          <h4 class="menu__title">Ravioles de foie gras</h4>
+          <p class="menu__description">
+            Accompagnés de leur crème à la truffe
+          </p>
+          </header>
+          <div class="menu__price">25€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
-        </div>
+          </div>
+          </section>
 
-        <div class="menu__body menu__body4">
-            <div class="menu__body--title">
-              <div>
-                <h4>Foie gras de canard cuit entier</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Confiture de figue et pain toasté</p>
-                  <span class="menu__body--price">35€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+          <section class="menu delay-2">
+          <header class="menu__header">
+          <h4 class="menu__title">Caviar osciètre</h4>
+          <p class="menu__description">
+            Sur blini à la farine de blé noir
+          </p>
+          </header>
+          <div class="menu__price">35€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+          <section class="menu delay-3">
+          <header class="menu__header">
+          <h4 class="menu__title">Homard et espuma de potiron</h4>
+          <p class="menu__description">
+            Mariné aux zests d'orange
+          </p>
+          </header>
+          <div class="menu__price">20€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+          <section class="menu delay-4">
+          <header class="menu__header">
+          <h4 class="menu__title">Foie gras de canard cuit entier</h4>
+          <p class="menu__description">
+            Confiture de figue et pain toasté
+          </p>
+          </header>
+          <div class="menu__price">35€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
 
       <!--PLATS-->
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Plat</span>s</h3>
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Plat</span>s</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Noix de coquilles Saint-Jacques</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Sur lit de purée de céleri-rave</p>
-                  <span class="menu__body--price">40€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Langoustine poêlée</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Purée de patate douce</p>
-                  <span class="menu__body--price">35€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Mijoté de queue de boeuf</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Et riz sauvage aux zests de citron</p>
-                  <span class="menu__body--price">44€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+          <section class="menu delay-5">
+          <header class="menu__header">
+          <h4 class="menu__title">Noix de coquilles Saint-Jacques</h4>
+          <p class="menu__description">
+            Sur lit de purée de céleri-rave
+          </p>
+          </header>
+          <div class="menu__price">40€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
+          </div>
+          </section>
+
+          <section class="menu delay-6">
+          <header class="menu__header">
+          <h4 class="menu__title">Langoustine poêlée</h4>
+          <p class="menu__description">
+            Purée de patate douce
+          </p>
+          </header>
+          <div class="menu__price">35€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+          <section class="menu delay-7">
+          <header class="menu__header">
+          <h4 class="menu__title">Mijoté de queue de boeuf</h4>
+          <p class="menu__description">
+            Et riz sauvage aux zests de citron
+          </p>
+          </header>
+          <div class="menu__price">44€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
 
         <!--DESSERTS-->
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Dess</span>erts</h3>
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Dess</span>erts</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Macaron noisette et chocolat</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Glace au caramel brun et sel de Guérande</p>
-                  <span class="menu__body--price">18€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-           <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Baba au rhum revisité</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Avec son coulis de citron</p>
-                  <span class="menu__body--price">22€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Tarte au citron meringuée</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Destructurée</p>
-                  <span class="menu__body--price">23€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+           <section class="menu delay-8">
+          <header class="menu__header">
+          <h4 class="menu__title">Macaron noisette et chocolat</h4>
+          <p class="menu__description">
+            Glace au caramel brun et sel de Guérande
+          </p>
+          </header>
+          <div class="menu__price">18€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
+          </div>
+          </section>
+
+           <section class="menu delay-9">
+          <header class="menu__header">
+          <h4 class="menu__title">Baba au rhum revisité</h4>
+          <p class="menu__description">
+            Avec son coulis de citron
+          </p>
+          </header>
+          <div class="menu__price">22€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+           <section class="menu delay-10">
+          <header class="menu__header">
+          <h4 class="menu__title">Tarte au citron meringuée</h4>
+          <p class="menu__description">
+            Destructurée
+          </p>
+          </header>
+          <div class="menu__price">23€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
       </div>
+
       <div class="button">
       <input type="button" class="explication__button" value="Commander"></input></div>
     </section>

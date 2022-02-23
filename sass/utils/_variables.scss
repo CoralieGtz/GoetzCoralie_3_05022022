@@ -4,3 +4,16 @@ $tertiary: #99e2d0;
 
 $color1: #ffffff;
 $color2: #000000;
+
+$bgc: #bdbcbc;
+$box-shadow: 2px 3px 8px lighten($bgc, 10%);
+
+$lightbtn: 2px 3px 8px lighten($color2, 40%);
+$darkbtn: 2px 3px 8px $color2;
+
+$border: 30px;
+
+$breakpoints: (
+  "tablet": 380px,
+  "desktop": 990px,
+);

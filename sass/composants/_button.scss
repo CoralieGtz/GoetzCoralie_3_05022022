@@ -2,16 +2,26 @@
   border: 0;
   font-size: 1rem;
   background: linear-gradient($secondary, $primary);
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   border-radius: 45px;
-  box-shadow: 2px 3px 8px rgb(117, 116, 116);
+  box-shadow: $lightbtn;
   color: $color1;
   position: relative;
-  &:hover {
-    box-shadow: 2px 3px 10px rgb(31, 30, 30);
+  cursor: pointer;
+  &:active {
+    box-shadow: $darkbtn;
     background: linear-gradient(
       lighten($secondary, 10%),
       lighten($primary, 10%)
     );
+  }
+  @include desktop {
+    &:hover {
+      box-shadow: $darkbtn;
+      background: linear-gradient(
+        lighten($secondary, 10%),
+        lighten($primary, 10%)
+      );
+    }
   }
 }

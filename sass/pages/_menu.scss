@@ -1,18 +1,19 @@
 //----------HEADER----------//
-header {
+.header__menu {
   display: flex;
   align-items: center;
   position: relative;
-  height: 4rem;
+  &--title {
+    width: 100%;
+    text-align: center;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2.5rem;
+  }
   .fa-arrow-left-long {
     position: absolute;
     top: 1.5rem;
     color: $color2;
     margin-left: 2rem;
-  }
-  .header-title {
-    font-family: "Shrikhand", sans-serif;
-    font-size: 2rem;
   }
 }
 
@@ -27,125 +28,104 @@ header {
 }
 
 //-----------MENU----------//
-.section__menu {
+.sectionMenu {
   position: relative;
   margin-top: -4rem;
   width: 100%;
   z-index: 1;
   padding: 1.5rem;
   border-radius: 3rem 3rem 0 0;
-  background-color: #f6f6f6;
-  &--title {
+  background-color: lighten($bgc, 23%);
+  &__title {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-family: "Shrikhand", sans-serif;
-
     h2 {
-      margin-right: 3rem;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
     }
     .icon-heart {
       width: 24px;
       height: 24px;
-      top: 2.3rem;
-      right: 3rem;
+      top: 1.8rem;
+      right: 2.5rem;
     }
   }
 }
 
-.card__menu1 {
-  &--title {
+.menuOne {
+  &__title {
     margin: 2rem 0;
   }
   h3 {
     text-transform: uppercase;
     font-weight: lighter;
   }
-  &--important {
+  &__important {
     padding-bottom: 0.2rem;
     border-bottom: 4px solid $tertiary;
   }
 }
 
-.menu__body {
-  cursor: pointer;
-  &--title {
-    position: relative;
-    margin-bottom: 1rem;
-    background-color: $color1;
-    border-radius: 1.2rem;
-    overflow: hidden;
-    &:hover span {
-      transform: translateX(-4rem);
-    }
-    &:hover .check {
-      transform: translateX(-4rem);
-    }
-    &:hover i {
-      transform: rotate(360deg);
-    }
-  }
-  h4 {
-    padding: 0.8rem 0.8rem 0.2rem 0.8rem;
-  }
-  &--subtitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.8rem 0.8rem 0.8rem;
-    p {
-      font-size: 1rem;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
-  &--price {
-    margin-left: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: transform 0.5s;
-  }
-}
-
-.check {
+.menu {
+  background-color: $color1;
+  box-shadow: $box-shadow;
+  padding: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $tertiary;
-  border-radius: 0 1.2rem 1.2rem 0;
-  width: 4rem;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 0 -4rem;
-  transition: transform 0.5s;
-  .fa-circle-check {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  cursor: pointer;
+  &__title {
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+  }
+  &__header {
+    width: 100%;
+  }
+  &__header,
+  &__title,
+  &__description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    @include flex-end(row);
+    padding-left: 0.5rem;
+    font-weight: bold;
+  }
+
+  &__check {
+    @include center(row);
+    background-color: $tertiary;
+    margin: -1rem -7rem -1rem 1rem;
+    width: 6rem;
+    transition: margin-right 1s;
+  }
+  &:hover .menu__check {
+    margin-right: -1rem;
+  }
+
+  &__effectIcon {
+    @include center(row);
+    height: 1.6rem;
+    width: 1.6rem;
     color: $color1;
-    transition: transform 0.5s;
+    transition: transform 1s;
+    .fa-circle-check {
+      font-size: 1.5rem;
+    }
+  }
+  &:hover .menu__effectIcon {
+    transform: rotate(360deg);
   }
 }
 
-.menu__body1 {
-  animation: apparition 2s;
-}
-.menu__body2 {
-  animation: apparition 4s;
-}
-.menu__body3 {
-  animation: apparition 6s;
-}
-.menu__body4 {
-  animation: apparition 8s;
-}
-
-@keyframes apparition {
-  from {
-    opacity: 0;
-  }
-  to {
+@for $i from 1 to 9 {
+  .delay-#{$i} {
+    animation-delay: $i * 1;
     opacity: 1;
   }
 }
@@ -153,5 +133,5 @@ header {
 .button {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem;
 }

@@ -21,9 +21,9 @@
   <body>
 
     <!------------HEADER------------>
-    <header>
+    <header class="header__menu">
       <a href="index.html"> <i class="fa-solid fa-arrow-left-long"></i></a>
-      <p class="header-title">ohmyfood</p>
+      <p class="header__menu--title">ohmyfood</p>
     </header>
 
     <!----------IMAGE------------>
@@ -35,163 +35,170 @@
     </section>
 
     <!-----------MENU----------->
-    <section class="section__menu">
-      <div class="section__menu--title">
+    <section class="sectionMenu">
+      <div class="sectionMenu__title">
         <h2>Le délice des sens</h2>
-        <a href=""><i class="fa-regular fa-heart icon-heart"></i></a>
+        <i class="fa-regular fa-heart icon-heart"></i>
       </div>
 
     <!--ENTREES-->
-      <div class="card__menu">
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Entr</span>ées</h3>
+      <div class="container-menu">
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Entr</span>ées</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Tartare de thon</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Assaisonné au yuzu</p>
-                  <span class="menu__body--price">25€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Bouchée de homard croustillant</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Et sa farandole de petits légumes</p>
-                  <span class="menu__body--price">35€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-           <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Velouté de cèpes</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Aux truffes</p>
-                  <span class="menu__body--price">20€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+          <section class="menu delay-1">
+          <header class="menu__header">
+          <h4 class="menu__title">Tartare de thon</h4>
+          <p class="menu__description">
+            Assaisonné au yuzu
+          </p>
+          </header>
+          <div class="menu__price">25€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
+          </div>
+          </section>
+
+          <section class="menu delay-2">
+          <header class="menu__header">
+          <h4 class="menu__title">Bouchée de homard croustillant</h4>
+          <p class="menu__description">
+            Et sa farandole de petits légumes
+          </p>
+          </header>
+          <div class="menu__price">35€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+          <section class="menu delay-3">
+          <header class="menu__header">
+          <h4 class="menu__title">Velouté de cèpes</h4>
+          <p class="menu__description">
+            Aux truffes
+          </p>
+          </header>
+          <div class="menu__price">20€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
 
       <!--PLATS-->
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Plat</span>s</h3>
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Plat</span>s</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Poulet rôti aux herbes de provence</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Et sa crème de truffe</p>
-                  <span class="menu__body--price">40€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Langouste rôtie</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Et ses légumes de saison</p>
-                  <span class="menu__body--price">35€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Côte de boeuf angus</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Et sa purée de panais</p>
-                  <span class="menu__body--price">44€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+          <section class="menu delay-4">
+          <header class="menu__header">
+          <h4 class="menu__title">Poulet rôti aux herbes de provence</h4>
+          <p class="menu__description">
+            Et sa crème de truffe
+          </p>
+          </header>
+          <div class="menu__price">40€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
+          </div>
+          </section>
+
+          <section class="menu delay-5">
+          <header class="menu__header">
+          <h4 class="menu__title">Langouste rôtie</h4>
+          <p class="menu__description">
+            Et ses légumes de saison
+          </p>
+          </header>
+          <div class="menu__price">35€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+          <section class="menu delay-6">
+          <header class="menu__header">
+          <h4 class="menu__title">Côte de boeuf angus</h4>
+          <p class="menu__description">
+            Et sa purée de panais
+          </p>
+          </header>
+          <div class="menu__price">44€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
 
         <!--DESSERTS-->
-        <div class="card__menu1">
-          <div class="card__menu1--title">
-            <h3><span class="card__menu1--important">Dess</span>erts</h3>
+        <div class="menuOne">
+          <div class="menuOne__title">
+            <h3><span class="menuOne__important">Dess</span>erts</h3>
           </div>
 
-          <div class="menu__body menu__body1">
-            <div class="menu__body--title">
-              <div>
-                <h4>Farandole de desserts</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Du chef</p>
-                  <span class="menu__body--price">18€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-           <div class="menu__body menu__body2">
-            <div class="menu__body--title">
-              <div>
-                <h4>Crème brulée</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>Revisitée</p>
-                  <span class="menu__body--price">22€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
-
-            <div class="menu__body menu__body3">
-            <div class="menu__body--title">
-              <div>
-                <h4>Tiramisu</h4>
-              </div>
-                <div class="menu__body--subtitle">
-                  <p>À la noisette</p>
-                  <span class="menu__body--price">23€</span>
-                </div>
-                <div class="check">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+           <section class="menu delay-7">
+          <header class="menu__header">
+          <h4 class="menu__title">Farandole de desserts</h4>
+          <p class="menu__description">
+            Du chef
+          </p>
+          </header>
+          <div class="menu__price">18€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
+          </div>
+          </section>
+
+           <section class="menu delay-8">
+          <header class="menu__header">
+          <h4 class="menu__title">Crème brulée</h4>
+          <p class="menu__description">
+            Revisitée
+          </p>
+          </header>
+          <div class="menu__price">22€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
+
+           <section class="menu delay-9">
+          <header class="menu__header">
+          <h4 class="menu__title">Tiramisu</h4>
+          <p class="menu__description">
+            À la noisette
+          </p>
+          </header>
+          <div class="menu__price">23€</div>
+          <div class="menu__check">
+          <div class="menu__effectIcon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          </div>
+          </section>
         </div>
       </div>
+
       <div class="button">
       <input type="button" class="explication__button" value="Commander"></input></div>
     </section>
