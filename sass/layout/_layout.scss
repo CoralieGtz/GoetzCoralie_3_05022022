@@ -140,8 +140,14 @@
 .section3 {
   width: 100%;
   background-color: lighten($bgc, 23%);
+  @include desktop {
+    padding-bottom: 4rem;
+  }
   &__title {
     padding: 1.5rem;
+  }
+  @include desktop {
+    padding-top: 2rem;
   }
 }
 

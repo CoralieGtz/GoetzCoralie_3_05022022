@@ -169,7 +169,7 @@ h3 {
   color: #9356dc;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .functioning__element:hover i {
     color: #9356dc;
   }
@@ -238,15 +238,27 @@ h3 {
   background-color: #f7f7f7;
 }
 
+@media screen and (min-width: 1280px) {
+  .section3 {
+    padding-bottom: 4rem;
+  }
+}
+
 .section3__title {
   padding: 1.5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .section3 {
+    padding-top: 2rem;
+  }
 }
 
 .cards {
   margin: 0 1.5rem;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .first-group,
   .second-group {
     display: -webkit-box;
@@ -302,7 +314,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .card {
     width: 45%;
     margin: 2rem 1rem;
@@ -361,7 +373,7 @@ h3 {
   transition: all 1s;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .icon-heart:hover {
     color: transparent;
   }
@@ -410,7 +422,7 @@ footer a:active {
   text-shadow: 0 0 5px #f71af7;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   footer a:hover {
     text-shadow: 0 0 5px #f71af7;
   }
@@ -437,7 +449,7 @@ footer a:active {
   background: linear-gradient(#fface8, #ae80e5);
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .explication__button:hover {
     -webkit-box-shadow: 2px 3px 8px #000000;
             box-shadow: 2px 3px 8px #000000;
@@ -632,11 +644,24 @@ footer a:active {
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 1280px) {
+  .header__menu--title {
+    font-size: 4rem;
+  }
+}
+
 .header__menu .fa-arrow-left-long {
   position: absolute;
   top: 1.5rem;
   color: #000000;
   margin-left: 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .header__menu .fa-arrow-left-long {
+    top: 2rem;
+    font-size: 2rem;
+  }
 }
 
 .header-img img {
@@ -664,9 +689,6 @@ footer a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -674,11 +696,46 @@ footer a:active {
   letter-spacing: 1px;
 }
 
+@media screen and (min-width: 1280px) {
+  .sectionMenu__title h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .sectionMenu__title .icon-heart {
   width: 24px;
   height: 24px;
   top: 1.8rem;
   right: 2.5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionMenu__title .icon-heart {
+    top: 2rem;
+    left: 30rem;
+  }
+}
+
+.sectionMenu__title .icon-heart:active {
+  color: transparent;
+}
+
+.sectionMenu__title .icon-heart:active::after {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  .container-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .menuOne__title {
@@ -763,7 +820,7 @@ footer a:active {
   transition: margin-right 1s;
 }
 
-.menu:hover .menu__check {
+.menu:active .menu__check {
   margin-right: -1rem;
 }
 
@@ -784,67 +841,39 @@ footer a:active {
   height: 1.6rem;
   width: 1.6rem;
   color: #ffffff;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
 .menu__effectIcon .fa-circle-check {
   font-size: 1.5rem;
 }
 
-.menu:hover .menu__effectIcon {
+.menu:active .menu__effectIcon {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.delay-1 {
-  -webkit-animation-delay: 1;
-          animation-delay: 1;
-  opacity: 1;
+@media screen and (min-width: 380px) {
+  .menu {
+    max-width: 450px;
+    margin: 1rem auto;
+  }
 }
 
-.delay-2 {
-  -webkit-animation-delay: 2;
-          animation-delay: 2;
-  opacity: 1;
-}
-
-.delay-3 {
-  -webkit-animation-delay: 3;
-          animation-delay: 3;
-  opacity: 1;
-}
-
-.delay-4 {
-  -webkit-animation-delay: 4;
-          animation-delay: 4;
-  opacity: 1;
-}
-
-.delay-5 {
-  -webkit-animation-delay: 5;
-          animation-delay: 5;
-  opacity: 1;
-}
-
-.delay-6 {
-  -webkit-animation-delay: 6;
-          animation-delay: 6;
-  opacity: 1;
-}
-
-.delay-7 {
-  -webkit-animation-delay: 7;
-          animation-delay: 7;
-  opacity: 1;
-}
-
-.delay-8 {
-  -webkit-animation-delay: 8;
-          animation-delay: 8;
-  opacity: 1;
+@media screen and (min-width: 1280px) {
+  .menu {
+    width: 400px;
+  }
+  .menu:hover .menu__check {
+    margin-right: -1rem;
+  }
+  .menu:hover .menu__effectIcon {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .button {
@@ -855,5 +884,74 @@ footer a:active {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .button {
+    margin-top: 4rem;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+}
+
+.delay-2 {
+  -webkit-animation: appear 1s linear;
+          animation: appear 1s linear;
+}
+
+.delay-3 {
+  -webkit-animation: appear 1.5s linear;
+          animation: appear 1.5s linear;
+}
+
+.delay-4 {
+  -webkit-animation: appear 2s linear;
+          animation: appear 2s linear;
+}
+
+.delay-5 {
+  -webkit-animation: appear 2.5s linear;
+          animation: appear 2.5s linear;
+}
+
+.delay-6 {
+  -webkit-animation: appear 3s linear;
+          animation: appear 3s linear;
+}
+
+.delay-7 {
+  -webkit-animation: appear 3.5s linear;
+          animation: appear 3.5s linear;
+}
+
+.delay-8 {
+  -webkit-animation: appear 4s linear;
+          animation: appear 4s linear;
+}
+
+.delay-9 {
+  -webkit-animation: appear 4.5s linear;
+          animation: appear 4.5s linear;
 }
 /*# sourceMappingURL=style.css.map */
