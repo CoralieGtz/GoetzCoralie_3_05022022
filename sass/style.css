@@ -711,8 +711,8 @@ footer a:active {
 
 @media screen and (min-width: 1280px) {
   .sectionMenu__title .icon-heart {
-    top: 2rem;
-    left: 30rem;
+    top: 2.5rem;
+    right: 4rem;
   }
 }
 

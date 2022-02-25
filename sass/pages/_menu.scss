@@ -59,8 +59,8 @@
       top: 1.8rem;
       right: 2.5rem;
       @include desktop {
-        top: 2rem;
-        left: 30rem;
+        top: 2.5rem;
+        right: 4rem;
       }
       &:active {
         color: transparent;
