@@ -954,4 +954,9 @@ footer a:active {
   -webkit-animation: appear 4.5s linear;
           animation: appear 4.5s linear;
 }
+
+.delay-10 {
+  -webkit-animation: appear 5s linear;
+          animation: appear 5s linear;
+}
 /*# sourceMappingURL=style.css.map */
