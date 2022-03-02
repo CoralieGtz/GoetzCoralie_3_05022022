@@ -8,7 +8,7 @@
         "base/_base.scss",
         "layout/_layout.scss",
         "composants/_button.scss",
-        "composants/_loader-spinner.scss",
+        "composants/_loading-spinner.scss",
         "pages/_menu.scss"
     ],
     "names": [],
