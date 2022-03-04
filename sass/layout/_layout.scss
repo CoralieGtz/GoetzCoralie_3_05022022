@@ -6,6 +6,9 @@
     text-align: center;
     font-family: "Shrikhand", sans-serif;
     font-size: 2.5rem;
+    @include desktop {
+      font-size: 4rem;
+    }
   }
 }
 
