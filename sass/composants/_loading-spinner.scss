@@ -1,10 +1,8 @@
 .container {
   @include center(column);
-  position: absolute;
   width: 100%;
   height: 100vh;
   position: fixed;
-  opacity: 0;
   background-color: rgba($color1, 0.9);
   animation: spinner 3s linear both;
 }
@@ -36,14 +34,12 @@
   width: 230px;
   height: 230px;
   border-top: 5px solid $secondary;
-  transform: rotate(85deg);
   animation: rotate-backward 2.5s linear;
 }
 .ring:nth-child(3) {
   width: 210px;
   height: 210px;
   border-top: 5px solid $tertiary;
-  transform: rotate(225deg);
   animation: rotate-forward 2.2s linear;
 }
 
@@ -65,7 +61,6 @@
 }
 
 .loading__text {
-  position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   animation: text 5s linear;

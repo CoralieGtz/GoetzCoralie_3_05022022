@@ -237,7 +237,7 @@
     color: transparent;
     z-index: -10;
     opacity: 0;
-    transition: all 1s;
+    transition: opacity 1s;
   }
   @include desktop {
     &:hover {

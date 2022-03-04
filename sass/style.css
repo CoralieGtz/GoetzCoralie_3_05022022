@@ -375,8 +375,8 @@ h3 {
   color: transparent;
   z-index: -10;
   opacity: 0;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 @media screen and (min-width: 1280px) {
@@ -478,11 +478,9 @@ footer a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
   width: 100%;
   height: 100vh;
   position: fixed;
-  opacity: 0;
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-animation: spinner 3s linear both;
           animation: spinner 3s linear both;
@@ -529,8 +527,6 @@ footer a:active {
   width: 230px;
   height: 230px;
   border-top: 5px solid #ff79da;
-  -webkit-transform: rotate(85deg);
-          transform: rotate(85deg);
   -webkit-animation: rotate-backward 2.5s linear;
           animation: rotate-backward 2.5s linear;
 }
@@ -539,8 +535,6 @@ footer a:active {
   width: 210px;
   height: 210px;
   border-top: 5px solid #99e2d0;
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
   -webkit-animation: rotate-forward 2.2s linear;
           animation: rotate-forward 2.2s linear;
 }
@@ -590,7 +584,6 @@ footer a:active {
 }
 
 .loading__text {
-  position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   -webkit-animation: text 5s linear;
