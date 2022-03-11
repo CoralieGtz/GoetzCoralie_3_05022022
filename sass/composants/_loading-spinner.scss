@@ -4,7 +4,34 @@
   height: 100vh;
   position: fixed;
   background-color: rgba($color1, 0.9);
-  animation: spinner 3s linear both;
+  animation: spinner 3s linear forwards;
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    &:nth-child(1) {
+      width: 250px;
+      height: 250px;
+      border-top: 5px solid $primary;
+      animation: rotate-forward 2.8s linear;
+    }
+    &:nth-child(2) {
+      width: 230px;
+      height: 230px;
+      border-top: 5px solid $secondary;
+      animation: rotate-backward 2.5s linear;
+    }
+    &:nth-child(3) {
+      width: 210px;
+      height: 210px;
+      border-top: 5px solid $tertiary;
+      animation: rotate-forward 2.2s linear;
+    }
+  }
+  .loading__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    animation: text 2.5s linear;
+  }
 }
 
 @keyframes spinner {
@@ -17,30 +44,6 @@
     opacity: 0;
     z-index: -1000;
   }
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.ring:nth-child(1) {
-  width: 250px;
-  height: 250px;
-  border-top: 5px solid $primary;
-  animation: rotate-forward 2.8s linear;
-}
-.ring:nth-child(2) {
-  width: 230px;
-  height: 230px;
-  border-top: 5px solid $secondary;
-  animation: rotate-backward 2.5s linear;
-}
-.ring:nth-child(3) {
-  width: 210px;
-  height: 210px;
-  border-top: 5px solid $tertiary;
-  animation: rotate-forward 2.2s linear;
 }
 
 @keyframes rotate-forward {
@@ -58,12 +61,6 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-.loading__text {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  animation: text 5s linear;
 }
 
 @keyframes text {

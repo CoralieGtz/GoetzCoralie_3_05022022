@@ -349,8 +349,8 @@ h3 {
   color: #000000;
   z-index: 20;
   opacity: 1;
-  -webkit-transition: color 250ms ease-in-out;
-  transition: color 250ms ease-in-out;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
   cursor: pointer;
 }
 
@@ -373,10 +373,9 @@ h3 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  z-index: -10;
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 @media screen and (min-width: 1280px) {
@@ -482,8 +481,44 @@ footer a:active {
   height: 100vh;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-animation: spinner 3s linear both;
-          animation: spinner 3s linear both;
+  -webkit-animation: spinner 3s linear forwards;
+          animation: spinner 3s linear forwards;
+}
+
+.container .ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.container .ring:nth-child(1) {
+  width: 250px;
+  height: 250px;
+  border-top: 5px solid #9356dc;
+  -webkit-animation: rotate-forward 2.8s linear;
+          animation: rotate-forward 2.8s linear;
+}
+
+.container .ring:nth-child(2) {
+  width: 230px;
+  height: 230px;
+  border-top: 5px solid #ff79da;
+  -webkit-animation: rotate-backward 2.5s linear;
+          animation: rotate-backward 2.5s linear;
+}
+
+.container .ring:nth-child(3) {
+  width: 210px;
+  height: 210px;
+  border-top: 5px solid #99e2d0;
+  -webkit-animation: rotate-forward 2.2s linear;
+          animation: rotate-forward 2.2s linear;
+}
+
+.container .loading__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  -webkit-animation: text 2.5s linear;
+          animation: text 2.5s linear;
 }
 
 @-webkit-keyframes spinner {
@@ -508,35 +543,6 @@ footer a:active {
     opacity: 0;
     z-index: -1000;
   }
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.ring:nth-child(1) {
-  width: 250px;
-  height: 250px;
-  border-top: 5px solid #9356dc;
-  -webkit-animation: rotate-forward 2.8s linear;
-          animation: rotate-forward 2.8s linear;
-}
-
-.ring:nth-child(2) {
-  width: 230px;
-  height: 230px;
-  border-top: 5px solid #ff79da;
-  -webkit-animation: rotate-backward 2.5s linear;
-          animation: rotate-backward 2.5s linear;
-}
-
-.ring:nth-child(3) {
-  width: 210px;
-  height: 210px;
-  border-top: 5px solid #99e2d0;
-  -webkit-animation: rotate-forward 2.2s linear;
-          animation: rotate-forward 2.2s linear;
 }
 
 @-webkit-keyframes rotate-forward {
@@ -581,13 +587,6 @@ footer a:active {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-.loading__text {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  -webkit-animation: text 5s linear;
-          animation: text 5s linear;
 }
 
 @-webkit-keyframes text {
